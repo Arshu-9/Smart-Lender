@@ -239,7 +239,7 @@ Support financial analysts with predictive insights.
 Clone the repository.
 
 ```bash
-git clone https://github.com/your-username/Smart-Lender.git
+git clone https://github.com/Arshu-9/Smart-Lender.git
 ```
 
 Navigate to the project folder.
@@ -309,13 +309,26 @@ This project demonstrates practical experience in:
 - REST API support
 
 ---
+---
 
-👨‍💻 Team Members
-R.Lokesh (Team Lead)
-G.Pushpa Sri
-T.Maruthi Manish
-Md.Arshad
+# 👨‍💻 Team Members
 
+This project was developed as a collaborative Machine Learning and Flask application by:
+
+| Name | Role |
+|------|------|
+| **R. Lokesh** | Team Lead |
+| **G. Pushpa Sri** | Team Member |
+| **T. Maruthi Manish** | Team Member |
+| **Md. Arshad** | Team Member |
+
+---
+
+# 🙏 Acknowledgements
+
+We sincerely thank our faculty members and mentors for their valuable guidance and support throughout the development of this project.
+
+This project was developed for academic purposes to demonstrate the practical implementation of **Machine Learning**, **Flask Web Development**, and **AI-based Loan Eligibility Prediction**.
 
 ---
 
