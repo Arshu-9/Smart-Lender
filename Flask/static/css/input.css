@@ -1,0 +1,473 @@
+/* ==============================
+   SMART LENDER UI
+============================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+
+    min-height:100vh;
+
+    background:linear-gradient(135deg,#2563eb,#1d4ed8,#0f172a);
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    padding:40px;
+}
+
+/* Background Glow */
+
+body::before{
+
+    content:"";
+
+    position:fixed;
+
+    width:500px;
+    height:500px;
+
+    background:#60a5fa;
+
+    border-radius:50%;
+
+    filter:blur(160px);
+
+    top:-150px;
+    left:-150px;
+
+    opacity:.35;
+
+    z-index:-1;
+}
+
+body::after{
+
+    content:"";
+
+    position:fixed;
+
+    width:450px;
+    height:450px;
+
+    background:#38bdf8;
+
+    border-radius:50%;
+
+    filter:blur(150px);
+
+    bottom:-150px;
+    right:-150px;
+
+    opacity:.30;
+
+    z-index:-1;
+}
+
+
+/* ==============================
+   Main Card
+============================== */
+
+.container{
+
+    width:100%;
+    max-width:1100px;
+
+    background:rgba(255,255,255,.14);
+
+    backdrop-filter:blur(20px);
+
+    border:1px solid rgba(255,255,255,.2);
+
+    border-radius:28px;
+
+    padding:50px;
+
+    box-shadow:
+
+    0 25px 60px rgba(0,0,0,.25);
+}
+
+
+/* ==============================
+   Logo
+============================== */
+
+.logo{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:12px;
+
+    color:white;
+
+    font-size:28px;
+
+    font-weight:700;
+
+    margin-bottom:25px;
+}
+
+
+/* ==============================
+   Heading
+============================== */
+
+.heading{
+
+    text-align:center;
+
+    margin-bottom:35px;
+}
+
+.heading h1,
+.heading h2{
+
+    color:white;
+
+    font-size:38px;
+
+    font-weight:700;
+
+    margin-bottom:15px;
+}
+
+.heading p{
+
+    color:#dbeafe;
+
+    font-size:17px;
+
+    line-height:1.7;
+}
+
+
+/* ==============================
+   Paragraph
+============================== */
+
+.content{
+
+    text-align:center;
+}
+
+.content p{
+
+    color:white;
+
+    font-size:18px;
+
+    line-height:1.9;
+
+    margin-bottom:40px;
+}
+
+
+/* ==============================
+   Buttons
+============================== */
+
+.btn,
+input[type="submit"]{
+
+    background:linear-gradient(90deg,#3b82f6,#2563eb);
+
+    color:white;
+
+    border:none;
+
+    outline:none;
+
+    padding:16px 36px;
+
+    border-radius:50px;
+
+    font-size:17px;
+
+    font-weight:600;
+
+    cursor:pointer;
+
+    transition:.35s;
+
+    box-shadow:
+
+    0 12px 25px rgba(37,99,235,.35);
+}
+
+.btn:hover,
+input[type="submit"]:hover{
+
+    transform:translateY(-4px);
+
+    box-shadow:
+
+    0 18px 35px rgba(37,99,235,.5);
+}
+
+
+/* ==============================
+   Form
+============================== */
+
+form{
+
+    display:grid;
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:22px;
+}
+
+
+/* Full Width */
+
+.full{
+
+    grid-column:1/3;
+}
+
+
+/* ==============================
+   Labels
+============================== */
+
+label{
+
+    display:block;
+
+    color:white;
+
+    font-weight:600;
+
+    margin-bottom:8px;
+}
+
+
+/* ==============================
+   Inputs
+============================== */
+
+input,
+select{
+
+    width:100%;
+
+    padding:15px 18px;
+
+    border-radius:14px;
+
+    border:1px solid rgba(255,255,255,.25);
+
+    background:rgba(255,255,255,.15);
+
+    color:white;
+
+    font-size:15px;
+
+    outline:none;
+
+    transition:.3s;
+}
+
+input::placeholder{
+
+    color:#dbeafe;
+}
+
+select{
+
+    appearance:none;
+}
+
+option{
+
+    color:#111827;
+}
+
+
+/* Focus */
+
+input:focus,
+select:focus{
+
+    border-color:#60a5fa;
+
+    background:rgba(255,255,255,.22);
+
+    transform:scale(1.02);
+}
+
+
+/* ==============================
+   Result Card
+============================== */
+
+.result{
+
+    text-align:center;
+
+    color:white;
+}
+
+.result h1{
+
+    font-size:52px;
+
+    margin-bottom:20px;
+}
+
+.result p{
+
+    font-size:19px;
+
+    line-height:1.8;
+
+    margin-bottom:35px;
+}
+
+
+/* Approved */
+
+.approved{
+
+    color:#4ade80;
+}
+
+
+/* Rejected */
+
+.rejected{
+
+    color:#f87171;
+}
+
+
+/* ==============================
+   Button Group
+============================== */
+
+.button-group{
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:20px;
+
+    flex-wrap:wrap;
+}
+
+
+/* ==============================
+   Cards
+============================== */
+
+.card{
+
+    background:rgba(255,255,255,.10);
+
+    border:1px solid rgba(255,255,255,.18);
+
+    border-radius:18px;
+
+    padding:25px;
+}
+
+
+/* ==============================
+   Animation
+============================== */
+
+.container{
+
+    animation:fadeUp .8s ease;
+}
+
+@keyframes fadeUp{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(35px);
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+    }
+}
+
+
+/* ==============================
+   Responsive
+============================== */
+
+@media(max-width:900px){
+
+    .container{
+
+        padding:35px;
+    }
+
+    form{
+
+        grid-template-columns:1fr;
+    }
+
+    .full{
+
+        grid-column:1;
+    }
+
+    .heading h1,
+    .heading h2{
+
+        font-size:30px;
+    }
+
+}
+
+@media(max-width:600px){
+
+    body{
+
+        padding:18px;
+    }
+
+    .container{
+
+        padding:25px;
+    }
+
+    .heading h1,
+    .heading h2{
+
+        font-size:26px;
+    }
+
+    .content p{
+
+        font-size:16px;
+    }
+
+    .result h1{
+
+        font-size:36px;
+    }
+
+}

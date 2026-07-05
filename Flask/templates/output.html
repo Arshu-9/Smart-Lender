@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Prediction Result | Smart Lender</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='css/input.css') }}">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+          rel="stylesheet">
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+</head>
+
+<body>
+
+<div class="container">
+
+    <div class="heading">
+
+        <div class="logo">
+
+            <i class="fa-solid fa-building-columns"></i>
+
+            <span>Smart Lender</span>
+
+        </div>
+
+        <h2>Loan Prediction Result</h2>
+
+    </div>
+
+    <div class="result">
+
+        {% if result == "✅ Loan Approved" %}
+
+            <div style="font-size:90px;">🎉</div>
+
+            <h1 class="approved">
+                {{ result }}
+            </h1>
+
+            <p>
+                Congratulations! Based on the information you provided,
+                our Machine Learning model predicts that your loan application
+                is likely to be approved.
+            </p>
+
+            <div class="card" style="margin:30px 0;">
+
+                <h3 style="color:#4ade80;margin-bottom:15px;">
+                    <i class="fa-solid fa-circle-check"></i>
+                    Strong Factors
+                </h3>
+
+                <p style="margin:0;">
+                    ✔ Credit profile evaluated successfully.<br>
+                    ✔ Financial details meet the prediction criteria.<br>
+                    ✔ Your application appears eligible.
+                </p>
+
+            </div>
+
+        {% else %}
+
+            <div style="font-size:90px;">❌</div>
+
+            <h1 class="rejected">
+                {{ result }}
+            </h1>
+
+            <p>
+                Unfortunately, based on the supplied information,
+                the model predicts that this loan application is
+                unlikely to be approved.
+            </p>
+
+            <div class="card" style="margin:30px 0;">
+
+                <h3 style="color:#f87171;margin-bottom:15px;">
+                    <i class="fa-solid fa-circle-exclamation"></i>
+                    Suggestions
+                </h3>
+
+                <p style="margin:0;">
+                    ✔ Improve your credit history.<br>
+                    ✔ Increase applicant income.<br>
+                    ✔ Reduce the requested loan amount.<br>
+                    ✔ Consider adding a co-applicant.
+                </p>
+
+            </div>
+
+        {% endif %}
+
+        <div class="button-group">
+
+            <a href="/predict">
+                <button class="btn">
+                    <i class="fa-solid fa-rotate"></i>
+                    Predict Again
+                </button>
+            </a>
+
+            <a href="/">
+                <button class="btn">
+                    <i class="fa-solid fa-house"></i>
+                    Home
+                </button>
+            </a>
+
+        </div>
+
+    </div>
+
+</div>
+
+</body>
+
+</html>
